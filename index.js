@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
                 instanceIds;
 
             if (reservations && reservations.length) {
-                instances = data.Reservations[0].Instances;
+                instances = data.Reservations.map(r => r.Instances).reduce((a1, a2) => a1.concat(a2));
                 instanceIds = instances.map(i => i.InstanceId);
                 if (action == "start") {
                     return ec2.startInstances({InstanceIds: instanceIds}).promise();
