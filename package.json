@@ -1,14 +1,22 @@
 {
   "name": "aws-lambda-ec2-scheduler",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use AWS Lambda service to automatically start stop EC2 instance on schedule",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "aws",
+    "ec2",
+    "lambda",
+    "cloudwatch",
+    "sns"
+  ],
+  "author": "Kuan Yao",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.5.0"
-  }
+  },
+  "homepage": "https://github.com/kuanyao/aws-lambda-ec2-scheduler#readme"
 }
